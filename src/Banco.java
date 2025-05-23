@@ -1,5 +1,13 @@
 public class Banco {
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+
+    public String nome;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 }
+
