@@ -1,7 +1,17 @@
 public abstract class Conta implements IConta {
-    private int numero;
-    private int agencia;
-    private double saldo;
+    
+    private static int SEQUENCIAL = 1;
+    protected static final int AGENCIA_PADRAO = 0001;
+
+    protected int numero;
+    protected int agencia;
+    protected double saldo;
+
+    public Conta() {
+        this.agencia = AGENCIA_PADRAO;
+        this.numero = SEQUENCIAL++;
+        //this.saldo = 0.0;
+    }
 
     public int getNumero() {
         return numero;
@@ -15,18 +25,20 @@ public abstract class Conta implements IConta {
 
     @Override
     public void sacar(double valor) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'sacar'");
+        saldo -= valor;
     }
     @Override
     public void depositar(double valor) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'depositar'");
+        saldo += valor;
     }
     @Override
     public void transferir(double valor, Conta contaDestino) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'transferir'");
+        this.sacar(valor);
+        contaDestino.depositar(valor);
+    }
+    @Override
+    public void imprimirExtrato() {
+
     }
 
 }
