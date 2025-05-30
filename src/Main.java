@@ -5,19 +5,16 @@ public class Main {
    banco.setNome("Banco Digital");
    System.out.println("Bem-vindo ao " + banco.getNome());
    System.out.println("===================================");
-
-   Conta cc = new ContaCorrente();
-   cc.imprimirExtrato();
-   cc.depositar(100);
-   cc.imprimirExtrato();
-
-   Conta cp = new ContaPoupanca();
-   cp.imprimirExtrato();
-   cc.transferir(10, cp);
-   cc.imprimirExtrato();
-   cp.imprimirExtrato();
    
-   cc.sacar(50);
+   Cliente Vini = new Cliente();
+   Vini.setNome("Vinicius");
+   Conta cc = new ContaCorrente(Vini);
+   Conta cp = new ContaPoupanca(Vini);
+
+   cc.depositar(180);
+   cc.transferir(100, cp);
    cc.imprimirExtrato();
+   cp.imprimirExtrato();
+   System.out.println("===================================");
    }
 }
