@@ -41,9 +41,9 @@ public abstract class Conta implements IConta {
         // Método abstrato a ser implementado pelas subclasses  
     }
     protected void imprimirInfoComum() {
-        System.out.println("Agência: " + this.agencia);
-        System.out.println("Número: " + this.numero);
-        System.out.println("Saldo: " + this.saldo);
+        System.out.println((String.format("Agência: %d ", this.agencia)));
+        System.out.println((String.format("Número: %d ", this.numero)));
+        System.out.println((String.format("Saldo: %.2f ", this.saldo)));
     }
 
 
