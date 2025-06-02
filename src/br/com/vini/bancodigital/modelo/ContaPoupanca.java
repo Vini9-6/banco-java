@@ -1,3 +1,4 @@
+package br.com.vini.bancodigital.modelo;
 public class ContaPoupanca extends Conta {
 
     public ContaPoupanca(Cliente cliente) {
