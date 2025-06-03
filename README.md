@@ -9,7 +9,7 @@ Este projeto implementa um sistema de banco digital simples, desenvolvido com Ja
 ```
 banco-java/
 ├── docs/
-│   └── diagrama.png           # imagem do diagrama UML
+│   └── diagrama.png          
 ├── src/
 │   └── br/
 │       └── com/
@@ -45,7 +45,7 @@ Abaixo está o diagrama de classes UML que representa a arquitetura do sistema.
 
 ### 📷 Visualização
 
-> 📁 O arquivo da imagem está localizado em: `docs/diagrama.png`
+
 
 ![Diagrama UML](docs/diagrama.png)
 
